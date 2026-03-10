@@ -97,3 +97,30 @@ formulario.addEventListener('submit', function(event) {
     inputNome.value = '';
 });
 
+
+//Todo com estado
+
+const form = document.querySelector('#tarefa');
+const input = document.querySelector('#inputTarefa');
+const list = document.querySelector('#listaTarefas');
+
+let tasks = [];
+
+function render() {
+    list.innerHTML = tasks.map(task => `
+        <li>${task}</li>
+    `).join("");
+}
+
+form.addEventListener('submit', function(event) {
+
+    event.preventDefault(); 
+
+    const novaTarefa = input.value;
+    tasks.push(novaTarefa); 
+
+    input.value = '';
+
+    render(); 
+});
+
