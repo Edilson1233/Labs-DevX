@@ -62,4 +62,13 @@
                 mensagemInscricao.className = "sucesso";
             }
         });
+
+        //LAB: Explorador de DOM
+        let cards = document.querySelectorAll(".card");
+
+        console.log("Número de cards encontrados: " + cards.length);
+
+        let primeiroCard = document.querySelector(".card p");
+
+primeiroCard.textContent = "Produto 1 Actualizado!";
     
