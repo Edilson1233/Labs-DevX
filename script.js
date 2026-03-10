@@ -80,3 +80,20 @@ primeiroCard.textContent = "Produto 1 Actualizado!";
 });
 
 
+//Fórmulário controlado
+
+const formulario = document.querySelector('#meuFormulario');
+const inputNome = document.querySelector('#nomeCliente');
+const mensagemExibicao = document.querySelector('#mensagemExibicao');
+
+formulario.addEventListener('submit', function(event) {
+    
+    event.preventDefault();
+
+    const nomeDigitado = inputNome.value;
+
+    mensagemExibicao.textContent = `Olá, ${nomeDigitado}! Seu formulário foi recebido pela TechVerse Digital com sucesso.`;
+
+    inputNome.value = '';
+});
+
