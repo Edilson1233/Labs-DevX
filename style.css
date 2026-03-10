@@ -32,3 +32,10 @@ button {
     font-weight: bold;
     margin-top: 10px;
 }
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}

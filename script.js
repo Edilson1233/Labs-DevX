@@ -71,4 +71,12 @@
         let primeiroCard = document.querySelector(".card p");
 
 primeiroCard.textContent = "Produto 1 Actualizado!";
-    
+
+// Remover um card ao clicar o botão "Remover sem usar ID"
+ document.addEventListener("click", function(event) {
+    if (event.target.tagName === "BUTTON") {
+       event.target.closest(".card").remove();
+    }
+});
+
+
